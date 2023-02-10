@@ -6,16 +6,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        name: Check out code
+      - uses: payned/loveai:tagname
+        name: loveai
 
       - uses: ilteoood/docker_buildx@master
         name: Build & push Docker image
         with:
           publish: true
           dockerFile: Dockerfile
-          imageName: miclon/chatgpt
+          imageName: loveai/chatgpt
           tag: latest
-          platform: linux/amd64
-          dockerUser: ${{ secrets.DOCKER_USERNAME }}
-          dockerPassword: ${{ secrets.DOCKER_PASSWORD }}
+          platform: linux/arm64
+          dockerUser: payned
+          dockerPassword: dckr_pat_0eJEwuNJ5GM61NusMLsiqSLzSp0

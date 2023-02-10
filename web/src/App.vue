@@ -11,7 +11,7 @@ const message = ref('')
 const messages = useStorage('messages', [
   {
     username: "chatGPT",
-    msg: "Hello, I'm chatGPT",
+    msg: "Hello, I'm chatGPT-hxit",
     time: dayjs().format('HH:mm'),
     type: 0,
   },
@@ -35,7 +35,7 @@ const sendMessage = async () => {
   const text = message.value
   message.value = ""
   messages.value.push({
-    username: "user",
+    username: "Ding",
     msg: text,
     time: dayjs().format('HH:mm'),
     type: 1,
@@ -60,7 +60,7 @@ const clearMessages = () => {
     <header id="header" class="bg-dark-50 text-white h-10 select-none">
       <LoadingOutlined v-if="loadding" class="pl-3 cursor-pointer" />
       <span class="text-size-5 pl-5">chatGPT</span>
-      <span class="pl-3">代码领悟</span>
+      <span class="pl-3">Hx-it</span>
       <a-tooltip>
         <template #title>清除聊天记录</template>
         <a-popconfirm title="确定清除本地所有聊天记录吗?" ok-text="是的" cancel-text="再想想" @confirm="clearMessages">
